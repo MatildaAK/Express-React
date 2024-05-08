@@ -9,6 +9,6 @@ describe("Test express book feature", () => {
 
     test("'Should include 2 books", async () => {
         const response = await request(app).get('/api/books');
-        expect(response.body).toStrictEqual("Express + Typescript");
+        expect(response.body).toStrictEqual({"books": [{"author": "Sebbe", "pages": 394, "title": "The green book"}, {"author": "Tomas", "pages": 584, "title": "The red book"}], "totalBooks": 2});
     })
 })
