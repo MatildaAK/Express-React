@@ -2,7 +2,7 @@ import { connect } from "mongoose";
 
 const connectDB = async () => {
    try {
-    const mongoURI = "mongoDB://localhost:27017/bookDb";
+    const mongoURI = "mongodb://localhost:27017/bookDb";
     await connect(mongoURI);
     console.log("MongoDB Connected...");
     } catch (err:any){
